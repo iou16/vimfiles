@@ -2,9 +2,6 @@ runtime! debian.vim
 
 set nocompatible
 
-"let &runtimepath = &runtimepath.',C:\Apps\vim74-kaoriya-win64\plugins\vimproc'
-"let &runtimepath = &runtimepath.',C:\Users\taki4416\.bundle\vimproc.vim'
-
 " set fileencodings=iso-2022-jp-3,iso-2022-jp,euc-jisx0213,euc-jp,utf-8,ucs-bom,euc-jp,eucjp-ms,cp932
 if has('kaoriya')
 	set fileencodings=guess
@@ -47,7 +44,6 @@ colorscheme wombat256mod
 
 
 runtime! native.vimrc
-set undodir=E:/cache/vim_undo
 
 " Plugin key-mappings.  " <C-k>でsnippetの展開
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
@@ -76,11 +72,6 @@ if filereadable("./local.vimrc")
 endif
 
 
-" inoremap {<Enter> {}<Left><CR><ESC><S-o>
-" inoremap [<Enter> []<Left><CR><ESC><S-o>
-" inoremap (<Enter> ()<Left><CR><ESC><S-o>
-" inoremap << <<
-
 " augroup clang-inspect-type-mapping
 "     autocmd!
 "     autocmd FileType cpp nmap <C-t> <Plug>(clang-inspect-type-at-cursor)
@@ -88,10 +79,6 @@ endif
 
 
 let g:vimshell_split_command = "vsplit"
-
-" デフォルトのmakeディレクトリ
-let g:my_build_directory = './'
-
 
 noremap '1 "nyi':tabnew ~/vimfiles/recipes/<C-r>n.vimrecipe
 noremap '2 "nyi':tabnew ~/vimfiles/plugin_conf/<C-r>n.vimrc
