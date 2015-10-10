@@ -48,6 +48,7 @@ NeoBundleRecipe 'vim-vis'
 NeoBundleRecipe 'vimproc.vim'
 NeoBundleRecipe 'vimshell.vim'
 NeoBundleRecipe 'yankround.vim'
+NeoBundleRecipe 'vim-unite-giti'
 
 "
 for bundle in neobundle#config#get_neobundles()
