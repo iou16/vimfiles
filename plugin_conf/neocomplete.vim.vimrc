@@ -9,7 +9,7 @@ function! neobundle#tapped.hooks.on_source(bundle)
   let g:neocomplete#enable_smart_case  = 1
   let g:neocomplete#enable_camel_case  = 0
 
-  let g:neocomplete#enable_auto_delimiter = 1
+  " let g:neocomplete#enable_auto_delimiter = 1
 
   " キャッシュする長さの最低値を指定
   let g:neocomplete#sources#syntax#min_keyword_length = 3
