@@ -17,6 +17,7 @@ NeoBundle 'vim-jp/vimdoc-ja'
 
 " NeoBundleRecipe 'BlockDiff'
 " NeoBundleRecipe 'TagHighlight'
+" NeoBundleRecipe 'vim-fugitive'
 NeoBundleRecipe 'clang_complete'
 NeoBundleRecipe 'cpp-vim'
 NeoBundleRecipe 'gundo.vim'
