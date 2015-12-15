@@ -15,3 +15,7 @@ set undodir=$HOME/.vim/undo
 " デフォルトのmakeディレクトリ
 let g:my_build_directory = './'
 
+let g:vimshell_interactive_encodings = {
+\'/tools/cygwin/bin/':'utf-8',
+\'/Program\ Files\ (x86)/Git/bin':'utf-8',
+\}

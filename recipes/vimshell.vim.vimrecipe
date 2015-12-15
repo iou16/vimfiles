@@ -5,5 +5,4 @@
 	'author' : 'Shougo',
 	'website' : 'https://github.com/Shougo/vimshell.vim',
 	'lazy' : 1,
-	'command_prefix' : 'VimShell',
 }
