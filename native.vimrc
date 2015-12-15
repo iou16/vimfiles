@@ -200,7 +200,8 @@ set nostartofline
 
 " -----------------------------------------------------------ヤンク
 " 無名レジスタの代わりにクリップボードを使用する
-set clipboard=unnamed,autoselect
+" set clipboard=unnamed,autoselect
+set clipboard=unnamedplus,autoselect
 
 " -----------------------------------------------------------入力
 " ESCキーから始まるキーを挿入モードで認識しない

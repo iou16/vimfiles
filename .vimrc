@@ -8,7 +8,8 @@ if has('kaoriya')
 else
 	set fileencodings=utf-8,ucs-bom,euc-jp,eucjp-ms,cp932
 endif
-set fileformats=dos,unix,mac
+" set fileformats=dos,unix,mac
+set fileformats=unix,dos,mac
 
 set encoding=utf-8
 " 次にファイルを開いた時に，閉じた時のカーソル位置に移動

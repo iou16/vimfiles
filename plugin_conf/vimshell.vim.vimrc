@@ -4,7 +4,7 @@ if !neobundle#tap('vimshell.vim')
 endif
 
 noremap 's :VimShellTab<CR>
-
+imap <buffer><C-g> <Plug>(vimshell_zsh_complete)
 function! neobundle#tapped.hooks.on_source(bundle)
 
 	let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -35,6 +35,7 @@ function! neobundle#tapped.hooks.on_source(bundle)
 	endfunction
 
 	" let g:vimshell_no_default_keymappings = 1
+	let g:vimshell_external_history_path = expand('~/.zsh-history')
 	
 endfunction
 

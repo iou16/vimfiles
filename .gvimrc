@@ -58,14 +58,14 @@ endif
 
 " -----------------------------------------------------------フォント
 " set guifont=Monaco\ for\ Powerline:h24:cANSI 0fi
-set guifont=Droid_Sans_Mono_Slashed_for_Pow:h24:cANSI
-set renderoptions=type:directx,renmode:5
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 14
+" set renderoptions=type:directx,renmode:5
 " set renderoptions=type:directx
-set guifontwide=TakaoGothic:h24:cSHIFTJIS
+set guifontwide=TakaoGothic\ 14
 " set guifont=Consolas:h12:cSHIFTJIS
 " set guifontwide=TakaoGothic:h12:cSHIFTJIS
 "
-set linespace=2
+" set linespace=2
 
 " -----------------------------------------------------------ツールバー
 " set toolbar=

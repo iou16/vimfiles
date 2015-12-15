@@ -5,4 +5,38 @@
 	'author' : 'Tom Link',
 	'website' : 'https://github.com/tomtom/tcomment_vim',
 	'lazy' : 1,
+	'autoload' : {
+		'mappings' : [
+			[
+				'sxino',
+				'<Plug>TComment_',
+			],
+		],
+		'commands' : [
+			{
+				'complete' : 'customlist,tcomment#CompleteArgs',
+				'name' : 'TCommentBlock',
+			},
+			{
+				'complete' : 'customlist,tcomment#CompleteArgs',
+				'name' : 'TCommentRight',
+			},
+			{
+				'complete' : 'customlist,tcomment#CompleteArgs',
+				'name' : 'TComment',
+			},
+			{
+				'complete' : 'customlist,tcomment#CompleteArgs',
+				'name' : 'TCommentMaybeInline',
+			},
+			{
+				'complete' : 'customlist,tcomment#Complete',
+				'name' : 'TCommentAs',
+			},
+			{
+				'complete' : 'customlist,tcomment#CompleteArgs',
+				'name' : 'TCommentInline',
+			},
+		],
+	},
 }
