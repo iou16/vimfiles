@@ -14,3 +14,4 @@ set undodir=$HOME/.vim/undo
 
 " デフォルトのmakeディレクトリ
 let g:my_build_directory = './'
+
