@@ -402,3 +402,10 @@ set modeline
 " set viminfo=
 " ファイル上書きの前にバックアップを作る
 " set writebackup
+"
+
+" ヤンクでカーソル位置の単語を置換
+nnoremap <silent> ciy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+noremap Y y$              
+noremap <silent> <C-[> $
+
