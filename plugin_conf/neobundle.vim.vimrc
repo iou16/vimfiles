@@ -11,56 +11,71 @@ call neobundle#begin(expand('~/.bundle'))
 let g:neobundle#default_options._ = { 'focus' : 1 }
 
 " neobundle.vim
-"NeoBundleFetch 'Shougo/neobundle.vim'
+" NeoBundleFetch 'Shougo/neobundle.vim'
 " vimdoc-ja
 NeoBundle 'vim-jp/vimdoc-ja'
 
-" NeoBundleRecipe 'BlockDiff'
-" NeoBundleRecipe 'TagHighlight'
-" NeoBundleRecipe 'vim-fugitive'
-NeoBundleRecipe 'clang_complete'
-NeoBundleRecipe 'cpp-vim'
-NeoBundleRecipe 'gundo.vim'
-NeoBundleRecipe 'lexima.vim'
-NeoBundleRecipe 'lightline.vim'
-NeoBundleRecipe 'nebula.vim'
-NeoBundleRecipe 'neocomplete.vim'
-NeoBundleRecipe 'neocomplete.vim'
-NeoBundleRecipe 'neomru.vim'
-NeoBundleRecipe 'neosnippet-snippets'
-NeoBundleRecipe 'neosnippet.vim'
-NeoBundleRecipe 'nerdtree'
-" NeoBundleRecipe 'pyclewn'
-NeoBundleRecipe 'tcomment_vim'
-NeoBundleRecipe 'unite-build'
-NeoBundleRecipe 'unite-git-conflict.vim'
-NeoBundleRecipe 'unite-git_grep'
-NeoBundleRecipe 'unite-gtags'
-NeoBundleRecipe 'unite-launch'
-NeoBundleRecipe 'unite-outline'
-NeoBundleRecipe 'unite.vim'
-NeoBundleRecipe 'vim-abolish'
-NeoBundleRecipe 'vim-clang-format'
-NeoBundleRecipe 'vim-mapswap'
-NeoBundleRecipe 'vim-prettyprint'
-NeoBundleRecipe 'vim-qfreplace'
-NeoBundleRecipe 'vim-quickrun'
-NeoBundleRecipe 'vim-repeat'
-NeoBundleRecipe 'vim-snowdrop'
-NeoBundleRecipe 'vim-surround'
-NeoBundleRecipe 'vim-unite-giti'
-NeoBundleRecipe 'vim-unite-history'
-NeoBundleRecipe 'vim-vis'
-NeoBundleRecipe 'vimproc.vim'
-NeoBundleRecipe 'vimshell.vim'
-NeoBundleRecipe 'yankround.vim'
+runtime! neobundle_conf/clang_complete.vimrc
+runtime! neobundle_conf/cpp-vim.vimrc
+runtime! neobundle_conf/gundo.vim.vimrc
+runtime! neobundle_conf/lexima.vim.vimrc
+runtime! neobundle_conf/lightline.vim.vimrc
+runtime! neobundle_conf/nebula.vim.vimrc
+runtime! neobundle_conf/neocomplete.vim.vimrc
+runtime! neobundle_conf/neomru.vim.vimrc
+runtime! neobundle_conf/neosnippet-snippets.vimrc
+runtime! neobundle_conf/neosnippet.vim.vimrc
+runtime! neobundle_conf/nerdtree.vimrc
+runtime! neobundle_conf/neocomplete.vim.vimrc
+runtime! neobundle_conf/tcomment_vim.vimrc
+runtime! neobundle_conf/unite.vim.vimrc
+runtime! neobundle_conf/vimproc.vim.vimrc
+runtime! neobundle_conf/vimshell.vim.vimrc
 
-"
+runtime! neobundle_conf/unite-build.vimrc
+runtime! neobundle_conf/unite-git-conflict.vim.vimrc
+runtime! neobundle_conf/unite-git_grep.vimrc
+runtime! neobundle_conf/unite-gtags.vimrc
+runtime! neobundle_conf/unite-launch.vimrc
+runtime! neobundle_conf/unite-outline.vimrc
+runtime! neobundle_conf/vim-abolish.vimrc
+runtime! neobundle_conf/vim-clang-format.vimrc
+runtime! neobundle_conf/vim-mapswap.vimrc
+runtime! neobundle_conf/vim-prettyprint.vimrc
+runtime! neobundle_conf/vim-qfreplace.vimrc
+runtime! neobundle_conf/vim-quickrun.vimrc
+runtime! neobundle_conf/vim-repeat.vimrc
+runtime! neobundle_conf/vim-snowdrop.vimrc
+runtime! neobundle_conf/vim-surround.vimrc
+runtime! neobundle_conf/vim-unite-giti.vimrc
+runtime! neobundle_conf/vim-unite-history.vimrc
+runtime! neobundle_conf/vim-vis.vimrc
+runtime! neobundle_conf/yankround.vim.vimrc
+
+"call neobundle#add_meta('vimshell')
+"call neobundle#add_meta('neocomplete')
+"call neobundle#add_meta('unite')
+"call neobundle#add_meta('prettyprint')
+"call neobundle#add_meta('vis')
+
+
 for bundle in neobundle#config#get_neobundles()
 	if neobundle#tap(bundle.name)
 		execute 'runtime! plugin_conf/'.bundle.name.'.vimrc'
 	endif
 endfor
+
+call neobundle#end()
+
+NeoBundleCheck
+
+finish
+" NeoBundleRecipe 'BlockDiff'
+" NeoBundleRecipe 'TagHighlight'
+" NeoBundleRecipe 'vim-fugitive'
+" NeoBundleRecipe 'pyclewn'
+
+"
 
 "" NeoBundleLazy 'lambdaisue/unite-grep-vcs', {
 "" 			\ 'filetypes' : ['grep',],
@@ -200,6 +215,3 @@ let g:neobundle#install_process_timeout = 60
 " let g:neobundle_default_hg_protocol   = 
 " NeoBundle 'valloric/youcompleteme'
 
-call neobundle#end()
-
-NeoBundleCheck
