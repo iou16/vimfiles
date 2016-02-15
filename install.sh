@@ -10,4 +10,5 @@ cp ./templete.vimrc ./my_conf.vimrc
 mkdir $HOME/.bundle 
 cd $HOME/.bundle
 git clone https://github.com/Shougo/neobundle.vim
+git clone https://github.com/vim-jp/vimdoc-ja
 
