@@ -1,0 +1,170 @@
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+lazy = 1
+on_i = 1
+
+[[plugins]]
+repo = 'hewes/unite-gtags'
+lazy = 1
+on_source = 'unite.vim'
+hook_add = '''
+	noremap g[ :Unite gtags/ref:<C-R><C-W> -auto-preview<CR>
+	noremap g] :Unite gtags/def:<C-R><C-W> -auto-preview<CR> 
+	noremap s] :Unite -auto-preview gtags/def:
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = 'runtime! plugin_conf/lightline.vim.vimrc'
+
+[[plugins]]
+repo = 'kana/vim-repeat'
+
+[[plugins]]
+repo = 'kmnk/vim-unite-giti'
+lazy = 1
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_add = '''
+	nmap gp <Plug>(yankround-gp)
+	nmap gP <Plug>(yankround-gP)
+	nmap p <Plug>(yankround-p)
+	nmap P <Plug>(yankround-P)
+	noremap 'y :Unite yankround<CR>
+	nmap <C-n> <Plug>(yankround-next)
+	nmap <C-p> <Plug>(yankround-prev)
+'''
+
+[[plugins]]
+repo = 'moznion/unite-git-conflict.vim'
+lazy = 1
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'Rip-Rip/clang_complete'
+lazy = 1
+on_ft = ['c', 'cpp']
+on_i = 1
+hook_source = 'runtime! plugin_conf/clang_complete.vimrc'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+lazy = 1
+hook_add = '''nmap <silent> 't :NERDTreeToggle<CR>'''
+hook_source = 'runtime! plugin_conf/nerdtree.vimrc'
+
+[[plugins]]
+repo = 'sgur/unite-git_grep'
+lazy = 1
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if   = "has('nvim')"
+lazy = 1
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+if   = "!has('nvim')"
+lazy = 1
+on_i = 1
+hook_source = 'runtime! plugin_conf/neocomplete.vim.vimrc'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+lazy = 1
+on_source = 'unite.vim'
+hook_add = '''
+	nnoremap sf :Unite file_mru -start-insert<CR>
+	nnoremap sd :Unite directory_mru -start-insert -default-action=cd<CR> 
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+lazy = 1
+on_source = ['deoplete.nvim', 'neocomplete.vim']
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+lazy = 1
+on_source = 'neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+lazy = 1
+hook_add = '''
+	nnoremap <silent> 'f :Unite file_rec -auto-preview -start-insert<CR>
+	nnoremap 'g :Unite grep:. -auto-preview<CR>
+	nnoremap <silent> 'r :UniteResume<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/unite-build'
+lazy = 1
+on_source = 'unite.vim'
+hook_add = '''
+	nmap 'b :execute(join(['Unite build:make:--directory=', g:my_build_directory], ''))<CR>
+	noremap 'B :UniteResume build<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+lazy = 1
+on_source = 'unite.vim'
+hook_add = '''
+	noremap 'o :Unite outline<CR>
+'''
+
+[[plugins]]
+repo  = 'Shougo/vimproc.vim'
+build = 'make'
+if    = "!has('kaoriya')"
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+lazy = 1
+hook_add = '''noremap 's :VimShellTab<CR>'''
+hook_source = 'runtime! plugin_conf/vimshell.vim'
+
+[[plugins]]
+repo = 'sjl/gundo.vim'
+lazy = 1
+hook_add = "nnoremap 'u :GundoToggle<CR>"
+
+[[plugins]]
+repo = 'taku-o/vim-vis'
+hook_add = "vnoremap : :B "
+
+[[plugins]]
+repo = 'thinca/vim-unite-history'
+lazy = 1
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+lazy = 1
+hook_add = '''
+	nnoremap <silent> 'c  :TComment<CR>
+	vnoremap <silent> <expr> 'c mode() == '<C-v>' ? ':TCommentInline<CR>' : ':TCommentMaybeInline<CR>'
+'''
+hook_source = 'runtime! plugin_conf/tcomment_vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'ujihisa/unite-launch'
+lazy = 1
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+lazy = 1
+on_ft = 'cpp'
