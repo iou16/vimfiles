@@ -1,44 +1,37 @@
-if !neobundle#tap('neocomplete.vim')
-  finish
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#max_list = 1000
+let g:neocomplete#enable_ignore_case = 0
+let g:neocomplete#enable_smart_case  = 1
+let g:neocomplete#enable_camel_case  = 0
+
+" let g:neocomplete#enable_auto_delimiter = 1
+
+" キャッシュする長さの最低値を指定
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" 指定された条件でomni補完を仕様するように
+let g:neocomplete#force_overwrite_completefunc = 1
+
+" clang_complete
+if !exists('g:neocomplete#force_omni_input_patterns')
+	let g:neocomplete#force_omni_input_patterns = {}
 endif
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#force_omni_input_patterns.c =
+	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp =
+	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+let g:neocomplete#force_omni_input_patterns.objc =
+	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.objcpp =
+	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
-function! neobundle#tapped.hooks.on_source(bundle)
-  let g:neocomplete#enable_at_startup = 1
-  let g:neocomplete#max_list = 1000
-  let g:neocomplete#enable_ignore_case = 0
-  let g:neocomplete#enable_smart_case  = 1
-  let g:neocomplete#enable_camel_case  = 0
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+\ 'default' : '',
+\ 'vimshell' : $HOME.'/.vimshell_hist',
+\ 'scheme' : $HOME.'/.gosh_completions'
+\ }
 
-  " let g:neocomplete#enable_auto_delimiter = 1
-
-  " キャッシュする長さの最低値を指定
-  let g:neocomplete#sources#syntax#min_keyword_length = 3
-  " 指定された条件でomni補完を仕様するように
-  let g:neocomplete#force_overwrite_completefunc = 1
-
-  " clang_complete
-  if !exists('g:neocomplete#force_omni_input_patterns')
-      let g:neocomplete#force_omni_input_patterns = {}
-  endif
-  let g:neocomplete#force_overwrite_completefunc = 1
-  let g:neocomplete#force_omni_input_patterns.c =
-        \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-  let g:neocomplete#force_omni_input_patterns.cpp =
-        \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-  let g:neocomplete#force_omni_input_patterns.objc =
-        \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-  let g:neocomplete#force_omni_input_patterns.objcpp =
-        \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-
-  " Define dictionary.
-  let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-	\ }
-endfunction
-
-call neobundle#untap()
 finish
   
 " コンプリート設定

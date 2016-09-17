@@ -43,7 +43,7 @@ command! -nargs=0 Q q
 set t_Co=256
 colorscheme wombat256mod
 
-
+runtime! common_native.vimrc
 runtime! native.vimrc
 
 " Plugin key-mappings.  " <C-k>でsnippetの展開
@@ -58,7 +58,20 @@ imap OD <Left>
 runtime! my_conf.vimrc
 
 " load plugins
-runtime! plugin_conf/neobundle.vim.vimrc
+" runtime! plugin_conf/neobundle.vim.vimrc
+source $HOME/vimfiles/toml_support.vimrc
+set runtimepath^=$HOME/.dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state("$HOME/.dein")
+   call dein#begin("$HOME/.dein")
+   " call dein#load_toml("$HOME/vimfiles/dein.toml")
+   source $HOME/vimfiles/dein_dict.vimrc
+   call dein#end()
+endif
+
+if dein#check_install()
+  call dein#install()
+endif
 
 if filereadable("/etc/vim/vimrc.local")
 	source /etc/vim/vimrc.local
@@ -91,3 +104,4 @@ let $path=$path.';C:\tools\cygwin\bin'
 
 
 filetype plugin indent on
+

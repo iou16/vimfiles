@@ -6,5 +6,4 @@ NeoBundle 'hewes/unite-gtags',
 \     'author' : 'hewes',
 \     'website' : 'https://github.com/hewes/unite-gtags',
 \     'depends' : 'Shougo/unite.vim',
-\     'lazy' : 1,
 \ }

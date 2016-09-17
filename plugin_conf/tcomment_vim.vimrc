@@ -1,20 +1,10 @@
 
-if !neobundle#tap('tcomment_vim')
-	finish
-endif
+" デフォルトキーマップ 有効/無効
+let g:tcommentMaps = 1
+let g:tcommentMapLeaderOp1 = ';c'
+" コメント解除時に右側スペースを削除
+let g:tcomment#rstrip_on_uncmment = 2
 
-nnoremap <silent> 'c  :TComment<CR>
-vnoremap <silent> <expr> 'c mode() == '<C-v>' ? ':TCommentInline<CR>' : ':TCommentMaybeInline<CR>'
-
-function! neobundle#tapped.hooks.on_source(bundle)
-	" デフォルトキーマップ 有効/無効
-	let g:tcommentMaps = 1
-	let g:tcommentMapLeaderOp1 = ';c'
-	" コメント解除時に右側スペースを削除
-	let g:tcomment#rstrip_on_uncmment = 2
-endfunction
-
-call neobundle#untap()
 finish
 
 

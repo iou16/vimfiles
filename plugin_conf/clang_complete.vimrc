@@ -1,22 +1,15 @@
-if !neobundle#tap('clang_complete') 
-  finish
-endif
 
-augroup clang_complete_lazy_autocmd
-  autocmd!
-  autocmd InsertEnter *.c,*.cpp
-  \		call neobundle#source('clang_complete') |
-  \		autocmd! clang_complete_lazy_autocmd
-augroup END
-
-function! neobundle#tapped.hooks.on_source(bundle)
-  let g:clang_library_path  = g:my_clang_path
-  let g:clang_user_options  = g:my_clang_option
-  let g:clang_make_default_keymappings = 0
-endfunction
-
-call neobundle#untap()
+let g:clang_library_path  = g:my_clang_path
+let g:clang_user_options  = g:my_clang_option
+let g:clang_make_default_keymappings = 0
 finish
+
+" augroup clang_complete_lazy_autocmd
+"   autocmd!
+"   autocmd InsertEnter *.c,*.cpp
+"   \		call neobundle#source('clang_complete') |
+"   \		autocmd! clang_complete_lazy_autocmd
+" augroup END
 
 " 基本設定
   " 無効化/有効化

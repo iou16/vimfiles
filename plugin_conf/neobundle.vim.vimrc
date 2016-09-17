@@ -31,25 +31,14 @@ runtime! neobundle_conf/tcomment_vim.vimrc
 runtime! neobundle_conf/unite.vim.vimrc
 runtime! neobundle_conf/vimproc.vim.vimrc
 runtime! neobundle_conf/vimshell.vim.vimrc
-
 runtime! neobundle_conf/unite-build.vimrc
-runtime! neobundle_conf/unite-git-conflict.vim.vimrc
-runtime! neobundle_conf/unite-git_grep.vimrc
+
 runtime! neobundle_conf/unite-gtags.vimrc
-runtime! neobundle_conf/unite-launch.vimrc
 runtime! neobundle_conf/unite-outline.vimrc
-runtime! neobundle_conf/vim-abolish.vimrc
-runtime! neobundle_conf/vim-clang-format.vimrc
-runtime! neobundle_conf/vim-mapswap.vimrc
-runtime! neobundle_conf/vim-prettyprint.vimrc
-runtime! neobundle_conf/vim-qfreplace.vimrc
-runtime! neobundle_conf/vim-quickrun.vimrc
 runtime! neobundle_conf/vim-repeat.vimrc
-runtime! neobundle_conf/vim-snowdrop.vimrc
 runtime! neobundle_conf/vim-surround.vimrc
 runtime! neobundle_conf/vim-unite-giti.vimrc
 runtime! neobundle_conf/vim-unite-history.vimrc
-runtime! neobundle_conf/vim-vis.vimrc
 runtime! neobundle_conf/yankround.vim.vimrc
 
 "call neobundle#add_meta('vimshell')
@@ -58,6 +47,20 @@ runtime! neobundle_conf/yankround.vim.vimrc
 "call neobundle#add_meta('prettyprint')
 "call neobundle#add_meta('vis')
 
+runtime! neobundle_conf/unite-git-conflict.vim.vimrc
+runtime! neobundle_conf/unite-git_grep.vimrc
+runtime! neobundle_conf/unite-launch.vimrc
+
+
+runtime! neobundle_conf/vim-abolish.vimrc
+runtime! neobundle_conf/vim-clang-format.vimrc
+runtime! neobundle_conf/vim-mapswap.vimrc
+runtime! neobundle_conf/vim-prettyprint.vimrc
+runtime! neobundle_conf/vim-qfreplace.vimrc
+runtime! neobundle_conf/vim-quickrun.vimrc
+runtime! neobundle_conf/vim-snowdrop.vimrc
+
+runtime! neobundle_conf/vim-vis.vimrc
 
 for bundle in neobundle#config#get_neobundles()
 	if neobundle#tap(bundle.name)

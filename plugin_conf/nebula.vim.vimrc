@@ -69,7 +69,7 @@ function! NebulaRecipeGen (enable_shortening)
 	if a:enable_shortening && has_key(nb_options, 'autoload') && (len(nb_options)==1)
 		call s:output_dict(nb_options['autoload'], 1, "\t")
 	else 
-		call s:output_dict(nb_options, 1, "\t")
+		call s:output_dict(nb_options, 1, "\t"))
 	endif
 	call add(s:output_string, "\t},")
 	call append('.', s:output_string)
