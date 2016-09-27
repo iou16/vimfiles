@@ -1,7 +1,7 @@
 
 " デフォルトキーマップ 有効/無効
-let g:tcommentMaps = 1
-let g:tcommentMapLeaderOp1 = ';c'
+let g:tcommentMaps = 0
+let g:tcommentMapLeaderOp1 = '"c'
 " コメント解除時に右側スペースを削除
 let g:tcomment#rstrip_on_uncmment = 2
 

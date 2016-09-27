@@ -58,15 +58,16 @@ imap OD <Left>
 runtime! my_conf.vimrc
 
 " load plugins
-" runtime! plugin_conf/neobundle.vim.vimrc
-" source $HOME/vimfiles/toml_support.vimrc
 set runtimepath^=$HOME/.dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state("$HOME/.dein")
-   call dein#begin("$HOME/.dein")
+let s:dein_dir = expand('~/.cache/dein')
+
+if dein#load_state(s:dein_dir)
+	echo 'a'
+   call dein#begin(s:dein_dir)
    call dein#load_toml("$HOME/vimfiles/dein.toml")
-   " source $HOME/vimfiles/dein_dict.vimrc
    call dein#end()
+   call dein#save_state()
 endif
 
 if dein#check_install()
