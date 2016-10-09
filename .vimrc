@@ -63,7 +63,6 @@ set runtimepath^=$HOME/.dein/repos/github.com/Shougo/dein.vim
 let s:dein_dir = expand('~/.cache/dein')
 
 if dein#load_state(s:dein_dir)
-	echo 'a'
    call dein#begin(s:dein_dir)
    call dein#load_toml("$HOME/vimfiles/dein.toml")
    call dein#end()
